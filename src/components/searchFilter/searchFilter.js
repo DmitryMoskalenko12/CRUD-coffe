@@ -1,13 +1,27 @@
 import './searchFilter.scss';
+import {Component} from 'react';
+class SearchFilter extends Component {
+constructor(props){
+  super(props);
+  this.state ={
+    term:''
+  }
+}
 
-function SearchFilter() {
+onSetTerm = (e) =>{
+let word = e.target.value;
+this.setState({term: word })
+this.props.findTerm(word)
+}
+
+render(){
   return(
     <section className="searchFilter">
       <div className="container">
       <div className="searchFilter__wrapper">
         <div className="searchFilter__search">
-          <label htmlFor="search">Looking for</label>
-          <input id="search" className="searchFilter__input"
+          <label className="searchFilter__label" htmlFor="search">Looking for</label>
+          <input value={this.state.term} onChange={this.onSetTerm} id="search" className="searchFilter__input"
            name="searchname" 
            type="text" 
            required placeholder="start typing here..." />
@@ -15,14 +29,18 @@ function SearchFilter() {
 
         <div className="searchFilter__filter">
           <div className="searchFilter__text">Or filter</div>
-          <button className="searchFilter__button">Brazil</button>
-          <button className="searchFilter__button">Kenya</button>
-          <button className="searchFilter__button">Columbia</button>
+          <div className="searchFilter__buttons">
+            <button className="searchFilter__Brazil">Brazil</button>
+            <button className="searchFilter__Kenya">Kenya</button>
+            <button className="searchFilter__Columbia">Columbia</button>
+          </div>
         </div>
       </div>
       </div>
     </section>
   )
+}
+  
 }
 
 export default SearchFilter;
