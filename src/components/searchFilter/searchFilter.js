@@ -18,11 +18,14 @@ render(){
   const buttons = [
     {clazz:'searchFilter__Brazil', name: 'Brazil'},
     {clazz:'searchFilter__Kenya', name: 'Kenya'},
-    {clazz:'searchFilter__Columbia', name: 'Columbia'}
+    {clazz:'searchFilter__Columbia', name: 'Columbia'},
+    {clazz:'searchFilter__All', name: 'All'}
   ]
 
   const res = buttons.map(elem =>{
-    return <button onClick={()=> this.props.findFilter(elem.name) } key={elem.name} className={elem.clazz}>{elem.name}</button>
+    return (
+    <button onClick={()=> this.props.findFilter(elem.name) } key={elem.name} className={elem.clazz}>{elem.name}</button>
+    )
   })
   return(
     <section className="searchFilter">
