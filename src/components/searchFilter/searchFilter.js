@@ -15,6 +15,15 @@ this.props.findTerm(word)
 }
 
 render(){
+  const buttons = [
+    {clazz:'searchFilter__Brazil', name: 'Brazil'},
+    {clazz:'searchFilter__Kenya', name: 'Kenya'},
+    {clazz:'searchFilter__Columbia', name: 'Columbia'}
+  ]
+
+  const res = buttons.map(elem =>{
+    return <button onClick={()=> this.props.findFilter(elem.name) } key={elem.name} className={elem.clazz}>{elem.name}</button>
+  })
   return(
     <section className="searchFilter">
       <div className="container">
@@ -30,9 +39,7 @@ render(){
         <div className="searchFilter__filter">
           <div className="searchFilter__text">Or filter</div>
           <div className="searchFilter__buttons">
-            <button className="searchFilter__Brazil">Brazil</button>
-            <button className="searchFilter__Kenya">Kenya</button>
-            <button className="searchFilter__Columbia">Columbia</button>
+        {res}
           </div>
         </div>
       </div>

@@ -16,13 +16,18 @@ class App extends Component {
         {name: 'Brazil', title:'AROMISTICO Coffee 1 kg', price: '6.99$', id: 5},
         {name: 'Brazil', title:'AROMISTICO Coffee 1 kg', price: '6.99$', id: 6}
       ],
-      term: ''
+      term: '',
+      filter: ''
     }
   }
 
   onSetTerm = (term) =>{
   this.setState({term})
   }
+
+  onSetFilter = (filter) =>{
+    this.setState({filter})
+    }
 
   setTerm = (items, term) =>{
     if (term.length === 0) {
@@ -32,14 +37,28 @@ class App extends Component {
       return elem.name.indexOf(term) > -1
     })
   }
+  setFilter = (items, filter) =>{
+  switch (filter) {
+    case 'Brazil':
+      return items.filter(elem => elem.name === 'Brazil')
+    case 'Kenya':
+      return items.filter(elem => elem.name === 'Kenya')  
+    case 'Columbia':
+      return items.filter(elem => elem.name === 'Columbia')
+    default:
+      return items
+  }
+  }
   render(){
-    const term = this.setTerm(this.state.data, this.state.term)
+    const {data, term, filter} = this.state
+    const final = this.setFilter(this.setTerm(data, term), filter);
+
     return(
       <div className="wrapper">
         <Header/>
         <About/>
-        <SearchFilter findTerm = {this.onSetTerm}/>
-        <CoffeList data = {term}/>
+        <SearchFilter findFilter = {this.onSetFilter} findTerm = {this.onSetTerm}/>
+        <CoffeList data = {final}/>
       </div>
     )
   } 
