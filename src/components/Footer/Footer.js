@@ -13,10 +13,10 @@ function Footer() {
           </ul>
         </div>
         <div className="footer__divider">
-              <hr className="footer__left"/>
-              <img src={treeBeans} alt="treeBeans" />
-              <hr className="footer__right"/>
-            </div>
+          <hr className="footer__left"/>
+          <img src={treeBeans} alt="treeBeans" />
+          <hr className="footer__right"/>
+       </div>
       </div>
     </section>
   )
