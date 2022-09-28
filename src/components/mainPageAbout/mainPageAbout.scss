@@ -1,0 +1,36 @@
+.aboutus{
+  padding-top: 80px;
+  padding-bottom: 101px;
+  min-height: 520px;
+  &__aboutus{
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+    text-align: center;
+  }
+  &__divider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 29.3px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  &__left, &__right{
+    width: 60px;
+    height: 0px;
+  }
+  &__text{
+    width: 589px;
+    min-height: 223px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    margin: 0 auto;
+    margin-top: 41px;
+  }
+}
