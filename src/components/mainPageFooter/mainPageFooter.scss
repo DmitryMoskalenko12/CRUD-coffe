@@ -1,0 +1,42 @@
+.footermain{
+  min-height: 150px;
+  &__list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 355px;
+    height: 40px;
+    list-style-type: none;
+    margin: 0 auto;
+    margin-top: 30px;
+    .imgparent{
+      position: relative;
+    }
+    li > a{
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 12px;
+      color: #000000;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    li > img{
+      position: absolute;
+      display: block;
+      left: -36px;
+      top: -17px;
+    }
+  }
+  &__divider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 29.3px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  &__left, &__right{
+    width: 60px;
+    height: 0px;
+  }
+}

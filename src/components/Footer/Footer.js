@@ -1,14 +1,16 @@
 import './Footer.scss';
 import beans from '../../icons/darkbeans.png';
 import treeBeans from '../../icons/treeBeans.png';
+import {Link} from 'react-router-dom';
+
 function Footer() {
   return(
     <section className="footer">
       <div className="container">
         <div className="footer__menu">
           <ul className="footer__list">
-            <li className="imgparent"><img src={beans} alt="beans" /> <a href="#">Coffee house</a></li>
-            <li><a href="#">Our coffee</a></li>
+            <li className="imgparent"><img src={beans} alt="beans" /> <Link end to={'/'}>Coffee house</Link></li>
+            <li><Link end to={'/ourCoffe'}>Our coffee</Link></li>
             <li><a href="#">For your pleasure</a></li>
           </ul>
         </div>

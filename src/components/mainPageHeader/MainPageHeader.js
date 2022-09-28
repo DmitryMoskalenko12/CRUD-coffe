@@ -1,14 +1,15 @@
 import beans from '../../icons/beans.png';
 import './mainPageHeader.scss';
 import headerbeans from '../../icons/whitebeans.png';
+import { Link } from 'react-router-dom';
 const MainPageHeader = () =>{
 return(
   <section className="header">
     <div className="container">
         <nav className="header__menu">
           <ul className="header__list">
-            <li className="imgparent"><img src={beans} alt="beans" /> <a href="#">Coffee house</a></li>
-            <li><a href="#">Our coffee</a></li>
+            <li className="imgparent"><img src={beans} alt="beans" /> <Link end to={'/'} >Coffee house</Link></li>
+            <li><Link end to={'/ourCoffe'}>Our coffee</Link></li>
             <li><a href="#">For your pleasure</a></li>
           </ul>
         </nav>
