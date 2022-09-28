@@ -3,18 +3,22 @@ import About from "../components/About/About";
 import CoffeList from "../components/coffeList/coffeList";
 import Footer from "../components/Footer/Footer";
 import SearchFilter from "../components/searchFilter/searchFilter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useHttpRequest } from "../hooks/http.hook";
+
 const OurCoffe = () =>{
 
-  const [data, setData] = useState([ 
-    {name: 'Brazil', title:'AROMISTICO Coffee 1 kg', price: '5.99$', id: 1},
-    {name: 'Kenya', title:'AROMISTICO Coffee 1 kg', price: '4.99$', id: 2},
-    {name: 'Columbia', title:'AROMISTICO Coffee 1 kg', price: '7.99$', id: 3},
-    {name: 'Brazil', title:'AROMISTICO Coffee 1 kg', price: '6.99$', id: 4},
-    {name: 'Columbia', title:'AROMISTICO Coffee 1 kg', price: '9.99$', id: 5},
-    {name: 'Columbia', title:'AROMISTICO Coffee 1 kg', price: '6.99$', id: 6}])
-    const [term, setTerm] = useState('')
-    const [filter, setFilter] = useState('')
+  const [data, setData] = useState([]);
+  const [term, setTerm] = useState('');
+  const [filter, setFilter] = useState('');
+
+    const {request} = useHttpRequest();
+
+    useEffect(() =>{
+      request('http://localhost:3004/data')
+      .then((res) => setData(res))
+      //eslint-disable-next-line
+    },[])
         
     const onSetTerm = (term) =>{
     setTerm(term)

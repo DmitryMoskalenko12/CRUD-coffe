@@ -1,0 +1,10 @@
+{
+ "data":[
+  {"name": "Brazil", "description":"Класне кофе", "title":"AROMISTICO Coffee 1 kg", "price": "5.99$","picture": "../../img/aromistiko.jpg", "id": 1},
+  {"name": "Kenya","description":"Мега класне кофе", "title":"AROMISTICO Coffee 1 kg", "price": "4.99$","picture": "../../img/aromistiko.jpg", "id": 2},
+  {"name": "Columbia", "description":"Нереально класне кофе", "title":"AROMISTICO Coffee 1 kg", "price": "7.99$","picture": "../../img/aromistiko.jpg", "id": 3},
+  {"name": "Brazil", "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "title":"AROMISTICO Coffee 1 kg", "price": "6.99$","picture": "../../img/aromistiko.jpg", "id": 4},
+  {"name": "Columbia","description":"Файне кофе", "title":"AROMISTICO Coffee 1 kg", "price": "9.99$","picture": "../../img/aromistiko.jpg", "id": 5},
+  {"name": "Columbia","description":"Ну таке собі кофе", "title":"AROMISTICO Coffee 1 kg", "price": "6.99$","picture": "../../img/aromistiko.jpg", "id": 6}
+ ]
+}

@@ -2,6 +2,7 @@ import './app.scss';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import OurCoffe from '../../page/OurCoffe';
 import FirstPage from '../../page/FirstPage';
+import CardPage from '../../page/CardPage'
  const App = () => {
   
     return(
@@ -10,6 +11,8 @@ import FirstPage from '../../page/FirstPage';
         <>
         <Route path ="/" element = {<FirstPage/>}/>
         <Route path="/ourCoffe" element = {<OurCoffe/>}/>
+        <Route path='/ourCoffe/:id' element = {<CardPage/>}/>
+       
         </>
         </Routes>
       
