@@ -1,20 +1,15 @@
 import './searchFilter.scss';
-import {Component} from 'react';
-class SearchFilter extends Component {
-constructor(props){
-  super(props);
-  this.state ={
-    term:''
-  }
-}
+import { useState } from 'react';
 
-onSetTerm = (e) =>{
+const SearchFilter = (props) => {
+const [term, setTerm] = useState('');
+
+const onSetTerm = (e) =>{
 let word = e.target.value;
-this.setState({term: word })
-this.props.findTerm(word)
+setTerm(word)
+props.findTerm(word)
 }
 
-render(){
   const buttons = [
     {clazz:'searchFilter__Brazil', name: 'Brazil'},
     {clazz:'searchFilter__Kenya', name: 'Kenya'},
@@ -24,7 +19,7 @@ render(){
 
   const res = buttons.map(elem =>{
     return (
-    <button onClick={()=> this.props.findFilter(elem.name) } key={elem.name} className={elem.clazz}>{elem.name}</button>
+    <button onClick={()=> props.findFilter(elem.name) } key={elem.name} className={elem.clazz}>{elem.name}</button>
     )
   })
   return(
@@ -33,7 +28,7 @@ render(){
       <div className="searchFilter__wrapper">
         <div className="searchFilter__search">
           <label className="searchFilter__label" htmlFor="search">Looking for</label>
-          <input value={this.state.term} onChange={this.onSetTerm} id="search" className="searchFilter__input"
+          <input value={term} onChange={onSetTerm} id="search" className="searchFilter__input"
            name="searchname" 
            type="text" 
            required placeholder="start typing here..." />
@@ -51,6 +46,6 @@ render(){
   )
 }
   
-}
+
 
 export default SearchFilter;
