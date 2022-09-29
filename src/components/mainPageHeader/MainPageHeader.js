@@ -3,7 +3,8 @@ import './mainPageHeader.scss';
 import headerbeans from '../../icons/whitebeans.png';
 import { Link, NavLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-const MainPageHeader = () =>{
+
+const MainPageHeader = (props) =>{
 return(
   <section className="header">
      <Helmet>
@@ -35,7 +36,7 @@ return(
           <div>Want to try our beans?</div> 
        </div>
 
-       <button className='header__button'>More</button>
+       <button onClick={() => props.setModal(true)} className='header__button'>More</button>
     </div>
   </section>
 )

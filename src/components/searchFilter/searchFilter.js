@@ -11,10 +11,10 @@ props.findTerm(word)
 }
 
   const buttons = [
-    {clazz:'searchFilter__Brazil', name: 'Brazil'},
-    {clazz:'searchFilter__Kenya', name: 'Kenya'},
-    {clazz:'searchFilter__Columbia', name: 'Columbia'},
-    {clazz:'searchFilter__All', name: 'All'}
+    {clazz:'searchfilter__Brazil', name: 'Brazil'},
+    {clazz:'searchfilter__Kenya', name: 'Kenya'},
+    {clazz:'searchfilter__Columbia', name: 'Columbia'},
+    {clazz:'searchfilter__All', name: 'All'}
   ]
 
   const res = buttons.map(elem =>{
