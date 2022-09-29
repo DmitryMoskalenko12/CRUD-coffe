@@ -11,7 +11,7 @@ const MainPageFooter = () =>{
           <ul className="footermain__list">
             <li className="imgparent"><img src={maindarkbeans} alt="beans" /> <Link end to={'/'}>Coffee house</Link></li>
             <li><Link end to={'/ourCoffe'} href="#">Our coffee</Link></li>
-            <li><a href="#">For your pleasure</a></li>
+            <li><Link end to= {'/pleasure'}>For your pleasure</Link></li>
           </ul>
         </div>
         <div className="footermain__divider">
