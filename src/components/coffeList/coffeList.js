@@ -6,9 +6,9 @@ function CoffeList(props) {
     return <CoffeListItem key = {id} coffeId = {id} title={title} name = {name} price = {price}/>
   })
   return(
-    <section className="coffeCard">
+    <section className="coffecard">
     <div className="container">
-      <ul className="coffeCard__wrapper">
+      <ul className="coffecard__wrapper">
         {card}
       </ul>
     </div>

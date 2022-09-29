@@ -23,20 +23,20 @@ props.findTerm(word)
     )
   })
   return(
-    <section className="searchFilter">
+    <section className="searchfilter">
       <div className="container">
-      <div className="searchFilter__wrapper">
-        <div className="searchFilter__search">
-          <label className="searchFilter__label" htmlFor="search">Looking for</label>
-          <input value={term} onChange={onSetTerm} id="search" className="searchFilter__input"
+      <div className="searchfilter__wrapper">
+        <div className="searchfilter__search">
+          <label className="searchfilter__label" htmlFor="search">Looking for</label>
+          <input value={term} onChange={onSetTerm} id="search" className="searchfilter__input"
            name="searchname" 
            type="text" 
            required placeholder="start typing here..." />
         </div>
 
-        <div className="searchFilter__filter">
-          <div className="searchFilter__text">Or filter</div>
-          <div className="searchFilter__buttons">
+        <div className="searchfilter__filter">
+          <div className="searchfilter__text">Or filter</div>
+          <div className="searchfilter__buttons">
         {res}
           </div>
         </div>

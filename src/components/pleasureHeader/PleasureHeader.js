@@ -1,9 +1,15 @@
 import './pleasureHeader.scss';
 import beans from '../../icons/beans.png';
 import {Link, NavLink} from 'react-router-dom';
+import {Helmet} from 'react-helmet'
 function PleasureHeader () {
   return(
     <section className="pleasure">
+      <Helmet>
+      <meta name="description" content="Pleasure content"/>
+   
+      <title>Four your pleasure page</title>
+      </Helmet>
       <div className="container">
         <nav className="pleasure__menu">
           <ul className="pleasure__list">

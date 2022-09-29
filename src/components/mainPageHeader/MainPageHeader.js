@@ -2,9 +2,15 @@ import beans from '../../icons/beans.png';
 import './mainPageHeader.scss';
 import headerbeans from '../../icons/whitebeans.png';
 import { Link, NavLink } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 const MainPageHeader = () =>{
 return(
   <section className="header">
+     <Helmet>
+      <meta name="description" content="Coffe house content"/>
+   
+      <title>Coffe house page</title>
+      </Helmet>
     <div className="container">
         <nav className="header__menu">
           <ul className="header__list">
