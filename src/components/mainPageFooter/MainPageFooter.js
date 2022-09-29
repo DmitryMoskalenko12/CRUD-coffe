@@ -1,7 +1,7 @@
 import './mainPageFooter.scss';
 import mainbeans from '../../icons/treeBeans.png';
 import maindarkbeans from '../../icons/darkbeans.png';
-import { Link } from 'react-router-dom';
+import { Link , NavLink} from 'react-router-dom';
 
 const MainPageFooter = () =>{
   return(
@@ -9,7 +9,7 @@ const MainPageFooter = () =>{
       <div className="container">
         <div className="footermain__menu">
           <ul className="footermain__list">
-            <li className="imgparent"><img src={maindarkbeans} alt="beans" /> <Link end to={'/'}>Coffee house</Link></li>
+            <li className="imgparent"><img src={maindarkbeans} alt="beans" /> <NavLink style={({isActive}) => ({color: isActive ? '#964b00' : 'inherit'})} end to={'/'}>Coffee house</NavLink></li>
             <li><Link end to={'/ourCoffe'} href="#">Our coffee</Link></li>
             <li><Link end to= {'/pleasure'}>For your pleasure</Link></li>
           </ul>

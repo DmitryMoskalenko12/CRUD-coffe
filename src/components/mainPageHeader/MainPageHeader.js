@@ -1,14 +1,14 @@
 import beans from '../../icons/beans.png';
 import './mainPageHeader.scss';
 import headerbeans from '../../icons/whitebeans.png';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 const MainPageHeader = () =>{
 return(
   <section className="header">
     <div className="container">
         <nav className="header__menu">
           <ul className="header__list">
-            <li className="imgparent"><img src={beans} alt="beans" /> <Link end to={'/'} >Coffee house</Link></li>
+            <li className="imgparent"><img src={beans} alt="beans" /> <NavLink style={({isActive}) => ({color: isActive ? '#964b00' : 'inherit'})} end to={'/'} >Coffee house</NavLink></li>
             <li><Link end to={'/ourCoffe'}>Our coffee</Link></li>
             <li><Link end to= {'/pleasure'}>For your pleasure</Link></li>
           </ul>
