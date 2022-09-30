@@ -13,7 +13,7 @@ const postData = () =>{
   const formData = {name: name, email: email, tel: tel}
   const json = JSON.stringify(formData);
   post('http://localhost:3004/post', json)
-  .then(()=>{document.querySelector('.modal__form').reset()})
+  .then(() => setName(''), setEmail(''), setTel(''), setTimeout(()=>{props.setModal(false)}, 2000) )
 }
 
 return(
@@ -22,9 +22,9 @@ return(
       <div onClick={() => props.setModal(false)} className="modal__close">&times;</div>
       <div className="modal__title">Залиште ваші дані і ми зв`яжемося з вами</div>
       <form onSubmit={(e) => {postData(); e.preventDefault();}} className='modal__form'>
-        <input onChange={(e) => setName(e.target.value)} className='modal__name' type="text" name='name' required placeholder='Name' />
-        <input onChange={(e) => setEmail(e.target.value)} className='modal__email' type="email" name='email' required placeholder='Email'/>
-        <input onChange={(e) => setTel(e.target.value)} className='modal__tel' type="number" name='phone' required placeholder='Tel'/>
+        <input value={name} onChange={(e) => setName(e.target.value)} className='modal__name' type="text" name='name' required placeholder='Name' />
+        <input value={email} onChange={(e) => setEmail(e.target.value)} className='modal__email' type="email" name='email' required placeholder='Email'/>
+        <input value={tel} onChange={(e) => setTel(e.target.value)} className='modal__tel' type="number" name='phone' required placeholder='Tel'/>
         <button className='modal__button'>Відправити</button>
       </form>
     </div>
