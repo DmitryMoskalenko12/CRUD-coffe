@@ -51,59 +51,10 @@
   ],
   "post": [
     {
-      "id": 1
-    },
-    {
-      "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "name": "Дмитрий",
-      "email": "dmtrmsklnk@gmail.com",
-      "id": 4
-    },
-    {
-      "name": "Дмитрий",
-      "email": "dmtrmsklnk@gmail.com",
-      "id": 5
-    },
-    {
-      "name": "ssrgergh",
-      "email": "khomchenko18@gmail.com",
-      "id": 6
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 7
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 8
-    },
-    {
-      "name": "Дмитрий",
-      "email": "dima.oksagen12@gmail.com",
-      "id": 9
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 10
-    },
-    {
-      "name": "",
-      "email": "",
-      "id": 11
-    },
-    {
       "name": "Дмитрий",
       "email": "dmtrmsklnk@gmail.com",
       "tel": "380996117693",
-      "id": 12
+      "id": 1
     }
   ]
 }

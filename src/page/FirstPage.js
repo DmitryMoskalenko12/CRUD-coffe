@@ -5,8 +5,10 @@ import MainPageFooter from "../components/mainPageFooter/MainPageFooter";
 import Modal from "../components/modal/Modal";
 import { useState } from "react";
 
+
 const FirstPage = () =>{
   const [modal, setModal] = useState(false);
+  
   return(
     <>
     <MainPageHeader modal = {modal} setModal = {setModal}/>
